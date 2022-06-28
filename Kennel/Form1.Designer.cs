@@ -36,6 +36,12 @@
             this.lb_AnimalsStored = new System.Windows.Forms.ListBox();
             this.btn_remove = new System.Windows.Forms.Button();
             this.btn_details = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.medicalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medicalPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.animalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_add
@@ -113,6 +119,47 @@
             this.btn_details.UseVisualStyleBackColor = true;
             this.btn_details.Click += new System.EventHandler(this.btn_details_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.medicalToolStripMenuItem,
+            this.animalsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(529, 24);
+            this.menuStrip1.TabIndex = 8;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // medicalToolStripMenuItem
+            // 
+            this.medicalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.medicalPageToolStripMenuItem});
+            this.medicalToolStripMenuItem.Name = "medicalToolStripMenuItem";
+            this.medicalToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.medicalToolStripMenuItem.Text = "Medical";
+            // 
+            // medicalPageToolStripMenuItem
+            // 
+            this.medicalPageToolStripMenuItem.Name = "medicalPageToolStripMenuItem";
+            this.medicalPageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.medicalPageToolStripMenuItem.Text = "Medical Page";
+            this.medicalPageToolStripMenuItem.Click += new System.EventHandler(this.medicalPageToolStripMenuItem_Click);
+            // 
+            // animalsToolStripMenuItem
+            // 
+            this.animalsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showListToolStripMenuItem});
+            this.animalsToolStripMenuItem.Name = "animalsToolStripMenuItem";
+            this.animalsToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.animalsToolStripMenuItem.Text = "Animals";
+            // 
+            // showListToolStripMenuItem
+            // 
+            this.showListToolStripMenuItem.Name = "showListToolStripMenuItem";
+            this.showListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.showListToolStripMenuItem.Text = "Show List";
+            this.showListToolStripMenuItem.Click += new System.EventHandler(this.showListToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,8 +173,11 @@
             this.Controls.Add(this.tb_name);
             this.Controls.Add(this.lbl_name);
             this.Controls.Add(this.btn_add);
+            this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
             this.Text = "Kennels";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,6 +193,11 @@
         private System.Windows.Forms.ListBox lb_AnimalsStored;
         private System.Windows.Forms.Button btn_remove;
         private System.Windows.Forms.Button btn_details;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem medicalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem medicalPageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem animalsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showListToolStripMenuItem;
     }
 }
 

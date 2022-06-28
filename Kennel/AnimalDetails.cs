@@ -37,7 +37,7 @@ namespace Kennel
                 tb_DogName.Text = _dog.Name;
         }
 
-        public void PassAnimal(object animal)
+        public void PassAnimal(Animal animal)
         {
             if(animal.GetType() == typeof(Dog))
             {

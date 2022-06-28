@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Kennel
 {
-    public class Dog
+    public class Dog : Animal
     {
-        public string Name;
+       
+        bool isHelp = false;
 
         public Dog()
         {

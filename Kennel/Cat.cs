@@ -6,8 +6,18 @@ using System.Threading.Tasks;
 
 namespace Kennel
 {
-    internal class Cat
+    public class Cat : Animal
     {
-        public string Name;
+        int numberOfLives = 9;
+
+        public Cat()
+        {
+
+        }
+
+        public Cat(string name)
+        {
+            Name = name;
+        }
     }
 }

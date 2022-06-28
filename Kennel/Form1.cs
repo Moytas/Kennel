@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+//C:\Users\Datalabs Teacher\source\repos\Kennel
 
 namespace Kennel
 {
@@ -20,6 +23,7 @@ namespace Kennel
         public Form1()
         {
             InitializeComponent();
+            Cat _cat = new Cat("A");
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -121,7 +125,6 @@ namespace Kennel
                     {
                         Dog newDog = DogsList[i];
                         dogDetails.PassAnimal(newDog);
-                        
                     }
                 }
 
@@ -155,12 +158,35 @@ namespace Kennel
                 if(index == -1)
                 {
                     index = 0;
-                    lb_AnimalsStored.SelectedIndex = index;
+                   // lb_AnimalsStored.SelectedIndex = 1;
                     string name = lb_AnimalsStored.Items[index].ToString();
                     AnimalDictionary.TryGetValue(name, out type);
                 }
             }
             return type;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MedicalRecord form2 = new MedicalRecord();
+            form2.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MedicalRecord form2 = new MedicalRecord();
+            form2.Show();
+        }
+
+        private void medicalPageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MedicalRecord form2 = new MedicalRecord();
+            form2.Show();
+        }
+
+        private void showListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
