@@ -41,6 +41,7 @@
             this.medicalPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.animalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_Store = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,7 +142,7 @@
             // medicalPageToolStripMenuItem
             // 
             this.medicalPageToolStripMenuItem.Name = "medicalPageToolStripMenuItem";
-            this.medicalPageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.medicalPageToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.medicalPageToolStripMenuItem.Text = "Medical Page";
             this.medicalPageToolStripMenuItem.Click += new System.EventHandler(this.medicalPageToolStripMenuItem_Click);
             // 
@@ -156,15 +157,26 @@
             // showListToolStripMenuItem
             // 
             this.showListToolStripMenuItem.Name = "showListToolStripMenuItem";
-            this.showListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.showListToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.showListToolStripMenuItem.Text = "Show List";
             this.showListToolStripMenuItem.Click += new System.EventHandler(this.showListToolStripMenuItem_Click);
+            // 
+            // btn_Store
+            // 
+            this.btn_Store.Location = new System.Drawing.Point(293, 68);
+            this.btn_Store.Name = "btn_Store";
+            this.btn_Store.Size = new System.Drawing.Size(75, 39);
+            this.btn_Store.TabIndex = 9;
+            this.btn_Store.Text = "STORE TO DATABASE";
+            this.btn_Store.UseVisualStyleBackColor = true;
+            this.btn_Store.Click += new System.EventHandler(this.btn_Store_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(529, 278);
+            this.Controls.Add(this.btn_Store);
             this.Controls.Add(this.btn_details);
             this.Controls.Add(this.btn_remove);
             this.Controls.Add(this.lb_AnimalsStored);
@@ -198,6 +210,7 @@
         private System.Windows.Forms.ToolStripMenuItem medicalPageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem animalsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showListToolStripMenuItem;
+        private System.Windows.Forms.Button btn_Store;
     }
 }
 

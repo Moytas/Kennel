@@ -10,6 +10,7 @@ namespace Kennel
     {
         public string Name;
         public int Age;
+        public string Type;
 
     }
 }

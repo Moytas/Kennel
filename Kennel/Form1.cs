@@ -17,14 +17,27 @@ namespace Kennel
     {
         List<Cat> CatsList = new List<Cat>();
         List<Dog> DogsList = new List<Dog>();
-
+        DBManager db;
         Dictionary<string,string> AnimalDictionary = new Dictionary<string,string>();
 
         public Form1()
         {
             InitializeComponent();
-            Cat _cat = new Cat("A");
+            db = new DBManager();
+            db.Connect();
+            GetAnimals();
         }
+
+        private void GetAnimals()
+        {
+           DogsList = db.GetAnimalsDog();
+            for(int i = 0; i < DogsList.Count; i++)
+            {
+                lb_AnimalsStored.Items.Add(DogsList[i].Name);
+            }
+        }
+
+        
 
         private void btn_add_Click(object sender, EventArgs e)
         {
@@ -95,6 +108,8 @@ namespace Kennel
             string name = "";
             name = lb_AnimalsStored.Items[lb_AnimalsStored.SelectedIndex].ToString();
 
+            db.DeleteAnimal(name);
+           
             for (int i = 0; i < DogsList.Count; i++)
             {
                 if (DogsList[i].Name == name)
@@ -159,8 +174,8 @@ namespace Kennel
                 {
                     index = 0;
                    // lb_AnimalsStored.SelectedIndex = 1;
-                    string name = lb_AnimalsStored.Items[index].ToString();
-                    AnimalDictionary.TryGetValue(name, out type);
+               //     string name = lb_AnimalsStored.Items[0].ToString();
+                   // AnimalDictionary.TryGetValue(name, out type);
                 }
             }
             return type;
@@ -186,6 +201,17 @@ namespace Kennel
 
         private void showListToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btn_Store_Click(object sender, EventArgs e)
+        {
+            for(int i = 0; i< lb_AnimalsStored.Items.Count;i++)
+            {
+                Dog d = new Dog();
+                d.Name = lb_AnimalsStored.Items[i].ToString();
+                db.StoreData(d);
+            }
 
         }
     }
