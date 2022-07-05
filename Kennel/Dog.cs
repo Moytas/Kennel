@@ -13,6 +13,7 @@ namespace Kennel
 
         public Dog()
         {
+            _AnimalType = AnimalType.Dog;
             Name = "Unknown";
         }
 

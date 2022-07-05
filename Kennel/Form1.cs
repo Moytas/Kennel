@@ -19,6 +19,8 @@ namespace Kennel
         List<Dog> DogsList = new List<Dog>();
         DBManager db;
         Dictionary<string,string> AnimalDictionary = new Dictionary<string,string>();
+        Dictionary<Animal, int> AnimalNumber = new Dictionary<Animal, int>();
+        Dictionary<int, Animal> AnimalIds = new Dictionary<int, Animal>();
 
         public Form1()
         {
@@ -26,6 +28,41 @@ namespace Kennel
             db = new DBManager();
             db.Connect();
             GetAnimals();
+            Cat c = new Cat();
+            AnimalIds.Add(0, c);
+            Cat d = new Cat();
+            d.Name = "1";
+            AnimalIds.Add(25, d);
+            Animal anim = new Animal();
+            Dog _d = new Dog();
+            AnimalIds.Add(2, _d);
+            AnimalIds.TryGetValue(2, out anim);
+            AnimalNumber.Add(_d, 1);
+            int x;
+            AnimalNumber.TryGetValue(_d, out x);
+
+            CatsList.OrderByDescending(y => y.Name).ThenBy(y => y.Age);
+            DogsList = DogsList.Where(z => z.Age >= 2).ToList();
+
+            //for (int x = 0; x < 10; x++)
+            //{ }
+
+            //while (x < 10)
+            //{
+            //    x++;
+            //}
+
+            //do
+            //{
+            //    x++;
+            //} while (x < 10);
+
+            //foreach (Cat c in CatsList)
+            //{
+            //    c.Age = 5;
+            //}
+
+            Console.WriteLine(x);
         }
 
         private void GetAnimals()
@@ -130,6 +167,9 @@ namespace Kennel
 
         private void btn_details_Click(object sender, EventArgs e)
         {
+            #region Comment
+            /*
+           
             AnimalDetails dogDetails = new AnimalDetails();
            
             if(FindAnimal(lb_AnimalsStored.SelectedIndex) == "dog")
@@ -157,6 +197,22 @@ namespace Kennel
                 }
             }
             dogDetails.Show();
+           
+            */
+            #endregion
+            string animal = lb_AnimalsStored.Items[lb_AnimalsStored.SelectedIndex].ToString();
+            Animal animalObj = (Animal)db.GetAnimal(animal);
+            AnimalDetails _animalDetails = new AnimalDetails();
+            if(animalObj._AnimalType == Animal.AnimalType.Dog)
+            {
+                _animalDetails.PassAnimal((Dog)animalObj);
+            }
+            else if(animalObj._AnimalType == Animal.AnimalType.Cat)
+            {
+                _animalDetails.PassAnimal((Cat)animalObj);
+            }
+            
+            _animalDetails.Show();
 
         }
 

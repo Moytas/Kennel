@@ -34,8 +34,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_CatName = new System.Windows.Forms.TextBox();
+            this.tb_CatAge = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -91,8 +91,8 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.textBox1);
-            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.tb_CatName);
+            this.tabPage2.Controls.Add(this.tb_CatAge);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -101,21 +101,21 @@
             this.tabPage2.Text = "Cats";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tb_CatName
             // 
-            this.textBox1.Location = new System.Drawing.Point(25, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Name";
+            this.tb_CatName.Location = new System.Drawing.Point(25, 32);
+            this.tb_CatName.Name = "tb_CatName";
+            this.tb_CatName.Size = new System.Drawing.Size(100, 20);
+            this.tb_CatName.TabIndex = 2;
+            this.tb_CatName.Text = "Name";
             // 
-            // textBox2
+            // tb_CatAge
             // 
-            this.textBox2.Location = new System.Drawing.Point(25, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "Age";
+            this.tb_CatAge.Location = new System.Drawing.Point(25, 73);
+            this.tb_CatAge.Name = "tb_CatAge";
+            this.tb_CatAge.Size = new System.Drawing.Size(100, 20);
+            this.tb_CatAge.TabIndex = 3;
+            this.tb_CatAge.Text = "Age";
             // 
             // AnimalDetails
             // 
@@ -145,7 +145,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_CatName;
+        private System.Windows.Forms.TextBox tb_CatAge;
     }
 }

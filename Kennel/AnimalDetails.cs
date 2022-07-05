@@ -39,12 +39,16 @@ namespace Kennel
 
         public void PassAnimal(Animal animal)
         {
-            if(animal.GetType() == typeof(Dog))
+            if(animal._AnimalType == Animal.AnimalType.Dog)
             {
+                tb_DogName.Text = animal.Name;
+                tb_DogAge.Text = animal.Age.ToString();
                 tabControl1.SelectedIndex = 0;
             }
             else
             {
+                tb_CatAge.Text = animal.Age.ToString();
+                tb_CatName.Text = animal.Name;
                 tabControl1.SelectedIndex = 1;
             }
         }

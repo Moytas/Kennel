@@ -10,7 +10,16 @@ namespace Kennel
     {
         public string Name;
         public int Age;
-        public string Type;
+        //public string Type;
 
+        public enum AnimalType
+        {
+            Dog,
+            Cat,
+            Bird,
+            Other
+        };
+
+        public AnimalType _AnimalType; 
     }
 }

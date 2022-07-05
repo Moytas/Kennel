@@ -12,7 +12,8 @@ namespace Kennel
 
         public Cat()
         {
-
+            _AnimalType = AnimalType.Cat;
+            
         }
 
         public Cat(string name)
